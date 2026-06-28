@@ -60,7 +60,7 @@ export default function Home() {
         localStorage.setItem('dolar-blue-auth', 'true');
         await fetchCotizacion();
       } else {
-        setError('Palabra secreta inválida. Intenta nuevamente.');
+        setError(result.mensaje || 'Palabra secreta inválida. Intenta nuevamente.');
       }
     } catch (err) {
       setError('Error al validar. Verifica tu conexión e intenta de nuevo.');
